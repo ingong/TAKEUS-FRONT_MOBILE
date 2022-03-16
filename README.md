@@ -4,7 +4,7 @@
 
 > 유기견 해외이동봉사 대상견 매칭 서비스, TAKE US
 
-<a href="https://takeus-front-mobile.vercel.app/">DEPLOY URL</a>
+<a href="https://takeus-front-mobile.vercel.app/">배포 링크</a>
 
 ### Tech Stack
 
@@ -16,7 +16,33 @@
 
 <br/>
 
-## Portfolio
+## release
+
+### release 1.0
+
+- 메인페이지
+- 사이드바를 통한 페이지 선택
+- 드롭다운을 통한 도착지 국가 및 공항 선택
+
+<div>
+<img src="/assets/readme_assets/README_1.png">
+</div>
+
+- 선택한 국가 및 공항 기반 입양견 리스트 조회
+- 강아지 상세 정보 조회
+- 구글 로그인
+<div>
+<img src="/assets/readme_assets/README_2.png">
+</div>
+
+### release 1.1 (예정)
+
+- 등록한 강아지 상태 변경
+- 후기 리스트 조회
+- 상세 후기 조회
+- 카카오 로그인
+
+## 고민과 해결
 
 1. Reducer를 활용한 컴포넌트 내부 상태 TOP-DOWN 설계 관련 코드
    - `utils/Component.reducer.ts`
