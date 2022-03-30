@@ -32,7 +32,9 @@ const ReviewPage = () => {
     router.push('/');
   };
   const handleWebPage = () => {
-    router.push(`${process.env.TAKEUS_DESKTOP_URL}/review`);
+    const DESKTOP_TAKEUSURL = process.env.TAKEUS_DESKTOP_URL as string;
+    const DESKTOP_TAKEUS_REVEIWPAGE = DESKTOP_TAKEUSURL + '/review';
+    router.push(DESKTOP_TAKEUS_REVEIWPAGE);
   };
 
   return (
