@@ -35,11 +35,17 @@
 <img src="/assets/readme_assets/README_2.png">
 </div>
 
+### release 1.0.1
+
+- typescript 관련 eslint 설정 수정
+- useModal 전달 인자 수정
+- Sidebar 버그 수정
+
 ### release 1.1 (예정)
 
-- 등록한 강아지 상태 변경
 - 후기 리스트 조회
-- 상세 후기 조회
+- 상세 후기 조회ㄴ
+- 등록한 강아지 상태 변경
 - 카카오 로그인
 
 ## 고민과 해결
