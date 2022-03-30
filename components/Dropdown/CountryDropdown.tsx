@@ -7,6 +7,7 @@ import { dropdownPropType } from '@Customtypes/dropdown';
 import { SelectorContainer } from './style';
 
 const CountryDropdown = (props: dropdownPropType): ReactElement => {
+  console.log(props);
   const {
     restProps: { countryList },
     onSubmit,

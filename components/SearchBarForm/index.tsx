@@ -22,9 +22,11 @@ const SearchBarForm = ({ handleSubmit }: HandleSubmitType): ReactElement => {
   };
   const handleCountryList = () => {
     openModal(modalList.CountryDropdown, {
-      countryList: getCountryList(),
       onSubmit: handleCountry,
       onClose: closeModal,
+      restProps: {
+        countryList: getCountryList(),
+      },
     });
   };
   const handleAirport = (value: string) => {
@@ -42,10 +44,10 @@ const SearchBarForm = ({ handleSubmit }: HandleSubmitType): ReactElement => {
     if (!(country && airport)) return;
     switch (router.pathname) {
       case '/':
-        handleSubmit(airport as string, country as string);
+        handleSubmit(airport, country);
         break;
       case '/dogs':
-        handleSubmit(airport as string);
+        handleSubmit(airport);
         break;
       default:
         return;
