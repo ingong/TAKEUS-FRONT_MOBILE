@@ -1,24 +1,21 @@
-import { ReactElement } from 'react';
-import { modalList } from '@components/Modals';
 import Overlay from '@components/Common/Overlay';
-
 import DeleteIcon from '@assets/DeleteIcon.svg';
-import { dropdownPropType } from '@Customtypes/dropdown';
+import { dropdownPropType } from '@components/Dropdown/dropdown';
 import { SelectorContainer } from './style';
+import { modalList } from '@components/Modals';
 
-const CountryDropdown = (props: dropdownPropType): ReactElement => {
-  console.log(props);
+const CountryDropdown = (props?: dropdownPropType): JSX.Element => {
   const {
-    restProps: { countryList },
     onSubmit,
     onClose,
-  } = props;
+    restProps: { countryList },
+  } = props as dropdownPropType;
 
   const handleClose = () => {
     onClose(modalList.CountryDropdown);
   };
   const handleClick = (e: React.MouseEvent) => {
-    onSubmit(e.currentTarget.textContent);
+    onSubmit(e.currentTarget.textContent as string);
   };
 
   return (
