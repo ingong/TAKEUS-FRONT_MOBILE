@@ -1,8 +1,8 @@
 import { createContext } from 'react';
-import { ModalListState, ModalsDispatch } from '@Customtypes/modal';
+import { ModalListStateType, ModalsDispatchType } from '@components/Modals/moda.type';
 
-export const ModalsStateContext = createContext<ModalListState | null>(null);
-export const ModalsDispatchContext = createContext<ModalsDispatch>({
+export const ModalsStateContext = createContext<ModalListStateType | null>(null);
+export const ModalsDispatchContext = createContext<ModalsDispatchType>({
   open: () => {},
   close: () => {},
 });
