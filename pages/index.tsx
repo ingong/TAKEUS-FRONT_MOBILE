@@ -32,7 +32,7 @@ const Home = ({ dogListCarousel, departureList }: HomePageProps) => {
 export async function getStaticProps() {
   const { dogList } = await getDogs();
   const dogListCarousel = dogList.slice(0, 10);
-  const { departureList } = (await getDepartureList()) as DepartureType;
+  const { departureList } = await getDepartureList();
 
   return {
     props: {

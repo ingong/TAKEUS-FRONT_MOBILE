@@ -14,7 +14,6 @@ import { getDepartureList } from '@service/utils';
 import { ERROR_TYPE } from '@service/index';
 import { DogCardListType, DepartureListPropType } from '@Customtypes/dog';
 import { DogPageContainer } from '@styles/page/dogs';
-import { DepartureType } from '@Customtypes/utils';
 
 const DogsPage = ({ departureList }: DepartureListPropType) => {
   const router = useRouter();
@@ -88,7 +87,7 @@ const DogsPage = ({ departureList }: DepartureListPropType) => {
 };
 
 export async function getStaticProps() {
-  const { departureList } = (await getDepartureList()) as DepartureType;
+  const { departureList } = await getDepartureList();
 
   return {
     props: {

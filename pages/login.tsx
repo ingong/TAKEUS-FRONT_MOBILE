@@ -69,10 +69,10 @@ const Login = () => {
     if ('accessToken' in response) {
       const token = response.accessToken;
       const { data } = await postToken(token, social);
-      localStorage.setItem('email', data.email as string);
-      localStorage.setItem('token', data.token as string);
-      localStorage.setItem('ID', data.id as string);
-      localStorage.setItem('issuedAt', data.issuedAt as string);
+      localStorage.setItem('email', data.email);
+      localStorage.setItem('token', data.token);
+      localStorage.setItem('ID', data.id);
+      localStorage.setItem('issuedAt', data.issuedAt);
       router.push('/');
     }
     return;
