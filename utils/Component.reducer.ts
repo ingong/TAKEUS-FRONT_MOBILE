@@ -1,5 +1,3 @@
-import React from 'react';
-
 export type State<T, E = unknown> =
   | {
       _TAG: 'IDLE';
