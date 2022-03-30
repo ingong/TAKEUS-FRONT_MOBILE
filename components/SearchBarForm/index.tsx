@@ -29,17 +29,21 @@ const SearchBarForm = ({ handleSubmit }: HandleSubmitType): ReactElement => {
       },
     });
   };
+
   const handleAirport = (value: string) => {
     setAirport(value);
   };
   const handleAirportList = () => {
     openModal(modalList.AirportDropdown, {
-      cityList: getCityList(country as string),
-      airportList: getAirportList(country as string),
       onSubmit: handleAirport,
       onClose: closeModal,
+      restProps: {
+        cityList: getCityList(country as string),
+        airportList: getAirportList(country as string),
+      },
     });
   };
+
   const handleClick = () => {
     if (!(country && airport)) return;
     switch (router.pathname) {
