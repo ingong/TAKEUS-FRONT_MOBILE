@@ -9,7 +9,7 @@ export const OverlayContainer = styled.div<OverlayPropType>`
   position: absolute;
   top: 0;
   height: 100vh;
-  height: ${(props) => props && props.height + 'vh'};
+  height: ${(props) => props && String(props.height) + 'vh'};
   width: 100%;
 
   opacity: 0.5;

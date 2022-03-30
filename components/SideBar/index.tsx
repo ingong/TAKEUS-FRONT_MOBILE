@@ -1,4 +1,3 @@
-import React, { ReactElement } from 'react';
 import { useRouter } from 'next/router';
 import Overlay from '@components/Common/Overlay';
 import { modalList } from '@components/Modals';
@@ -7,7 +6,7 @@ import useModals from '@hooks/useModals';
 import DeleteIcon from '@assets/DeleteIcon.svg';
 import { TotalContainer, SideBarContainer } from './style';
 
-const SideBar = (): ReactElement => {
+const SideBar = (): JSX.Element => {
   const router = useRouter();
   const { closeModal } = useModals();
   const handleClose = () => {

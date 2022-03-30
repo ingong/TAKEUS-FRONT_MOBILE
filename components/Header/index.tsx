@@ -44,7 +44,7 @@ const Header = () => {
 
   useEffect(() => {
     const getIssuedAtTime = () => localStorage.getItem('issuedAt');
-    const getNowTime = () => Math.floor(+new Date() / 1000);
+    const getNowTime = () => Math.floor(Number(new Date()) / 1000);
     const ONE_HOUR = 3600;
     const isValidToken = getNowTime() - Number(getIssuedAtTime()) < ONE_HOUR;
 

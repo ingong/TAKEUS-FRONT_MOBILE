@@ -1,34 +1,47 @@
 {
   "compilerOptions": {
-      "target": "es5",
-      "lib": ["dom", "dom.iterable", "esnext"],
-      "allowJs": true,
-      "skipLibCheck": true,
-      "strict": true,
-      "forceConsistentCasingInFileNames": true,
-      "noEmit": true,
-      "esModuleInterop": true,
-      "module": "esnext",
-      "moduleResolution": "node",
-      "resolveJsonModule": true,
-      "isolatedModules": true,
-      "jsx": "preserve",
-      "baseUrl": ".",
-      "paths": {
-          "@components/*": ["./components/*"],
-          "@const/*": ["./constants/*"],
-          "@hooks/*": ["./hooks/*"],
-          "@public/*": ["./public/*"],
-          "@styles/*": ["./styles/*"],
-          "@assets/*": ["./assets/*"],
-          "@utils/*": ["./utils/*"],
-          "@constants/*": ["./constants/*"],
-          "@store/*": ["./store/*"],
-          "@service/*": ["./service/*"],
-          "@context/*": ["./context/*"],
-          "@Customtypes/*": ["./types/*"],
-      },
-      "incremental": true
+    "target": "es5",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "skipDefaultLibCheck": true,
+    "moduleResolution": "node",
+    "allowJs": true, 
+    "jsx": "preserve", 
+    "declaration": true, 
+    "strict": true, 
+    "noImplicitAny": true, 
+    "strictNullChecks": true, 
+    "strictFunctionTypes": true,
+    "noUnusedLocals": true, 
+    "noUnusedParameters": true, 
+    "noFallthroughCasesInSwitch": true, 
+    "baseUrl": ".",
+    "paths": {
+      "@components/*": ["./components/*"],
+      "@const/*": ["./constants/*"],
+      "@hooks/*": ["./hooks/*"],
+      "@public/*": ["./public/*"],
+      "@styles/*": ["./styles/*"],
+      "@assets/*": ["./assets/*"],
+      "@utils/*": ["./utils/*"],
+      "@constants/*": ["./constants/*"],
+      "@store/*": ["./store/*"],
+      "@service/*": ["./service/*"],
+      "@context/*": ["./context/*"],
+      "@Customtypes/*": ["./types/*"],
+    },
+    "incremental": true,
+    "skipLibCheck": true,
+    "module": "esnext"
   },
   "include": [
     "next-env.d.ts",
@@ -39,7 +52,9 @@
     "styles",
     "pages",
     "public",
-    "context",
+    "context"
   ],
-  "exclude": ["node_modules"]
+  "exclude": [
+    "node_modules"
+  ]
 }

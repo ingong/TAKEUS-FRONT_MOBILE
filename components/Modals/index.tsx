@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 import SideBar from '@components/SideBar';
 import { CountryDropdown, AirportDropdown } from '@components/Dropdown';
-import { ModalsDispatchContext, ModalsStateContext } from '@context/ModalsContext';
-import { ModalListState, ModalsDispatch } from '@Customtypes/modal';
+import { ModalsStateContext } from '@context/ModalsContext';
+import { ModalListStateType } from './modal';
 
 export const modalList = {
   SideBar,
@@ -10,21 +10,19 @@ export const modalList = {
   AirportDropdown,
 };
 
-const Modals = (): JSX.Element => {
-  const openedModals = useContext(ModalsStateContext) as ModalListState;
-  const { close } = useContext(ModalsDispatchContext) as ModalsDispatch;
+const Modals = () => {
+  const openedModals = useContext(ModalsStateContext) as ModalListStateType;
+
   return (
     <>
-      {openedModals.map((modal, index) => {
+      {openedModals?.map((modal, index) => {
         const { Component, props } = modal;
-        const { onSubmit, ...restProps } = props ? props : { props, onSubmit: null };
-        const onClose = () => {
-          close(Component);
-        };
+        if (!props || !props.onSubmit || !props.onClose) return <Component key={index} />;
 
-        const handleSubmit = async (value?: string) => {
+        const { onSubmit, onClose, restProps } = props;
+        const handleSubmit = async (value: string) => {
           if (typeof onSubmit === 'function') await onSubmit(value);
-          onClose();
+          onClose(Component);
         };
 
         return (

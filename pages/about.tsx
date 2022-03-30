@@ -32,7 +32,9 @@ const AboutPage = () => {
     router.push('/');
   };
   const handleWebPage = () => {
-    router.push(`${process.env.TAKEUS_DESKTOP_URL}/about`);
+    const DESKTOP_TAKEUSURL = process.env.TAKEUS_DESKTOP_URL as string;
+    const DESKTOP_TAKEUS_ABOUTPAGE = DESKTOP_TAKEUSURL + '/about';
+    router.push(DESKTOP_TAKEUS_ABOUTPAGE);
   };
 
   return (

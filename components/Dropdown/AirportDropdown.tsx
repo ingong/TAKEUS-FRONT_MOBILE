@@ -1,23 +1,22 @@
-import { ReactElement } from 'react';
 import { modalList } from '@components/Modals';
 import Overlay from '@components/Common/Overlay';
 
 import DeleteIcon from '@assets/DeleteIcon.svg';
-import { dropdownPropType } from '@Customtypes/dropdown';
+import { dropdownPropType } from '@components/Dropdown/dropdown';
 import { SelectorContainer } from './style';
 
-const AirportDropdown = (props: dropdownPropType): ReactElement => {
+const AirportDropdown = (props?: dropdownPropType): JSX.Element => {
   const {
     restProps: { cityList, airportList },
     onClose,
     onSubmit,
-  } = props;
+  } = props as dropdownPropType;
 
   const handleClose = () => {
     onClose(modalList.AirportDropdown);
   };
   const handleClick = (e: React.SyntheticEvent<HTMLLIElement>) => {
-    onSubmit(e.currentTarget.dataset.airport);
+    onSubmit(e.currentTarget.dataset.airport as string);
   };
 
   const combinedList = airportList.map((airport: string, index: number) => [
