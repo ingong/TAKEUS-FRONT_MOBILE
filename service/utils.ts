@@ -31,12 +31,12 @@ export const postToken = async (token: string, social: string) => {
 };
 
 interface DepartureRespType {
-  departureList: Array<DepartureType>;
+  departureList: DepartureType;
 }
 
 export const getDepartureList = async (): Promise<DepartureRespType> => {
   const response = await instance.get('/api/airports/country');
-  const departureList = response.data.data as Array<DepartureType>;
+  const { _id, ...departureList } = response.data.data as DepartureType;
 
   return {
     departureList,
