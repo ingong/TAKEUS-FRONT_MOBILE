@@ -1,14 +1,10 @@
 import { ModalsStateContext, ModalsDispatchContext } from 'context/ModalsContext';
 import { ReactPortal, ReactChild, useState } from 'react';
-import {
-  ModalListStateType,
-  ModalsDispatchType,
-  ModalPropType,
-} from '@components/Modals/moda.type';
+import { ModalListStateType, ModalsDispatchType, ModalPropType } from '@components/Modals/modal';
 
 export function ModalsProvider({ children }: { children: ReactChild | ReactChild[] }) {
   const [openedModals, setOpenedModals] = useState<ModalListStateType>([]);
-  const open = (Component: () => ReactPortal | JSX.Element, props: ModalPropType) => {
+  const open = (Component: () => ReactPortal | JSX.Element, props?: ModalPropType) => {
     setOpenedModals((modals) => {
       return [...modals, { Component, props }];
     });
