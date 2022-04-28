@@ -25,6 +25,7 @@ export interface DogCardType {
   registerDate: string;
   shortenedDogName: string;
   shortenedAirport: string;
+  thumbNail: string | null;
   __v: number;
   detail: string;
 }
