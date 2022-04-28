@@ -43,10 +43,10 @@ export async function getStaticProps() {
     });
     const thumbNail = dogCard.photos.find((url) => url.length > 0) || null;
     return {
+      ...origin,
       shortenedDogName,
       shortenedAirport,
       thumbNail,
-      origin,
     };
   });
 
