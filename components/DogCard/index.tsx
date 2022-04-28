@@ -9,15 +9,12 @@ import { DogCardWrapper } from './style';
 
 const DogCard = ({ dogCardInfo }: { dogCardInfo: DogCardType }): ReactElement => {
   const router = useRouter();
-  const { shortenedDogName, shortenedAirport, isInstitution, photos, _id } = dogCardInfo;
-  const RepImage = photos.find((v) => v.length > 0);
-  const handleClick = (id: string) => {
-    router.push(`/dogs/${id}`);
-  };
+  const { shortenedDogName, shortenedAirport, thumbNail, isInstitution, _id } = dogCardInfo;
+  const handleClick = (id: string) => router.push(`/dogs/${id}`);
 
   return (
     <DogCardWrapper onClick={() => handleClick(_id)}>
-      <Image src={RepImage ? RepImage : TestImage} width={150} height={150} alt="TestImage" />
+      <Image src={thumbNail || TestImage} width={150} height={150} alt="TestImage" />
       <div className="info__dog">
         <p className="name"> {shortenedDogName} </p>
         <p className="airport">
