@@ -7,7 +7,7 @@ import useDeparture from '@hooks/useDeparture';
 import { HandleSubmitType } from '@Customtypes/dog';
 import SeacrhBtn from '@assets/SearchBtn.svg';
 import DropdownArrow from '@assets/DropdownArrow.svg';
-import { SearchBarFormContainer, DropdownContainer } from './style';
+import { SearchBarFormContainer, DropdownContainer } from './FormStyle';
 
 const SearchBarForm = ({ handleSubmit }: HandleSubmitType): ReactElement => {
   const router = useRouter();
