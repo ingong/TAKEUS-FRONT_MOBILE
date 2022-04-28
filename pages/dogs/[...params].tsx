@@ -1,4 +1,4 @@
-import Header from '@components/Header';
+import Header from '@components/Header/Header';
 import { getDogById, DogResponse } from '@service/dogs';
 import DogDetail from '@components/DogDetail';
 

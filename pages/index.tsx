@@ -1,6 +1,6 @@
-import Header from '@components/Header';
-import SearchBar from '@components/SearchBar';
-import DogCardContainer from '@components/DogCardContainer';
+import Header from '@components/Header/Header';
+import SearchBar from '@components/SearchBar/SearchBarContainer';
+import DogCardContainer from '@components/DogCard/Container';
 import MainPageInform from '@components/MainPageInform';
 import MobileInform from '@components/Common/MobileInform';
 import { getDogs } from '@service/dogs';

@@ -1,11 +1,11 @@
 import { ReactElement } from 'react';
-import Header from '@components/Header';
-import SearchBarForm from '@components/SearchBarForm';
+import Header from '@components/Header/Header';
+import SearchBarForm from '@components/SearchBar/SearchBarForm';
 
 import { HandleSubmitType } from '@Customtypes/dog';
-import StyledContainer from './style';
+import StyledContainer from './SearchHeaderstyle';
 
-const HeaderWithSearch = ({ handleSubmit }: HandleSubmitType): ReactElement => {
+const SearchHeader = ({ handleSubmit }: HandleSubmitType): ReactElement => {
   return (
     <StyledContainer>
       <Header />
@@ -15,4 +15,4 @@ const HeaderWithSearch = ({ handleSubmit }: HandleSubmitType): ReactElement => {
   );
 };
 
-export default HeaderWithSearch;
+export default SearchHeader;

@@ -1,8 +1,8 @@
 import React, { useEffect, useReducer } from 'react';
 import { useRouter } from 'next/router';
 import to from 'await-to-js';
-import HeaderWithSearch from '@components/HeaderWithSearch';
-import DogCard from '@components/DogCard';
+import HeaderWithSearch from '@components/Header/SearchHeader';
+import DogCard from '@components/DogCard/DogCard';
 import NoResult from '@components/Common/NoResult';
 import Loading from '@components/Common/Loading';
 import Error from '@components/Common/Error';
