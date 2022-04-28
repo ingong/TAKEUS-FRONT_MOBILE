@@ -9,6 +9,7 @@ import { getDepartureList } from '@service/utils';
 import { DepartureType } from '@Customtypes/utils';
 import { DogCardListType } from '@Customtypes/dog';
 import { NextPageContainer } from '@styles/page/main';
+import { shortenTextWithDot } from '@pipe/text.pipe';
 
 interface HomePageProps {
   dogListCarousel: DogCardListType;
@@ -31,8 +32,21 @@ const Home = ({ dogListCarousel, departureList }: HomePageProps) => {
 
 export async function getStaticProps() {
   const { dogList } = await getDogs();
-  const dogListCarousel = dogList.slice(0, 10);
   const { departureList } = await getDepartureList();
+  const dogListCarousel = dogList.slice(0, 10).map((dogCard) => {
+    const { name, endingAirport, ...origin } = dogCard;
+    const shortenedDogName = shortenTextWithDot({ text: name, limit: 4, isDotNeed: true });
+    const shortenedAirport = shortenTextWithDot({
+      text: endingAirport,
+      limit: 7,
+      isDotNeed: false,
+    });
+    return {
+      shortenedDogName,
+      shortenedAirport,
+      origin,
+    };
+  });
 
   return {
     props: {

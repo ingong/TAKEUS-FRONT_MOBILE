@@ -19,10 +19,10 @@ const DogCard = ({ dogCardInfo }: { dogCardInfo: DogCardType }): ReactElement =>
     <DogCardWrapper onClick={() => handleClick(_id)}>
       <Image src={RepImage ? RepImage : TestImage} width={150} height={150} alt="TestImage" />
       <div className="info__dog">
-        <p className="name"> {name.slice(0, 4) + '..'} </p>
+        <p className="name"> {name} </p>
         <p className="airport">
           <Location />
-          {endingAirport.slice(0, 7)}
+          {endingAirport}
         </p>
       </div>
       <div className="info__person">
