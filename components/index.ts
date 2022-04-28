@@ -1,15 +1,15 @@
 // MainPage
 export { default as SideBar } from './SideBar';
 export { default as MainPageInform } from './MainPageInform';
-export { default as DogCardContainer } from './DogCardContainer';
+export { default as DogCardContainer } from './DogCard/Container';
 
 // SearchBar
-export { default as SearchBar } from './SearchBar';
-export { default as SearchBarForm } from './SearchBarForm';
+export { default as SearchBar } from './SearchBar/SearchBarContainer';
+export { default as SearchBarForm } from './SearchBar/SearchBarForm';
 
 // Header
-export { default as Header } from './Header';
-export { default as HeaderWithSearch } from './HeaderWithSearch';
+export { default as Header } from './Header/Header';
+export { default as HeaderWithSearch } from './Header/SearchHeader';
 
 // Common
 export { default as Footer } from './Common/Footer';

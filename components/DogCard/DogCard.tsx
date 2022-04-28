@@ -5,24 +5,21 @@ import { useRouter } from 'next/router';
 import { DogCardType } from '@Customtypes/dog';
 import TestImage from '@assets/TestImage.png';
 import Location from '@assets/Location.svg';
-import { DogCardWrapper } from './style';
+import { DogCardWrapper } from './DogCardStyle';
 
 const DogCard = ({ dogCardInfo }: { dogCardInfo: DogCardType }): ReactElement => {
   const router = useRouter();
-  const { name, endingAirport, isInstitution, photos, _id } = dogCardInfo;
-  const RepImage = photos.find((v) => v.length > 0);
-  const handleClick = (id: string) => {
-    router.push(`/dogs/${id}`);
-  };
+  const { shortenedDogName, shortenedAirport, thumbNail, isInstitution, _id } = dogCardInfo;
+  const handleClick = (id: string) => router.push(`/dogs/${id}`);
 
   return (
     <DogCardWrapper onClick={() => handleClick(_id)}>
-      <Image src={RepImage ? RepImage : TestImage} width={150} height={150} alt="TestImage" />
+      <Image src={thumbNail || TestImage} width={150} height={150} alt="TestImage" />
       <div className="info__dog">
-        <p className="name"> {name.slice(0, 4) + '..'} </p>
+        <p className="name"> {shortenedDogName} </p>
         <p className="airport">
           <Location />
-          {endingAirport.slice(0, 7)}
+          {shortenedAirport}
         </p>
       </div>
       <div className="info__person">

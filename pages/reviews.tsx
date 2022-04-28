@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import styled from '@emotion/styled';
 import { useRouter } from 'next/router';
-import Header from '@components/Header';
+import Header from '@components/Header/Header';
 
 import LoadingImage from '@assets/LoadingImage.gif';
 import { VerticalAlign } from '@styles/common';

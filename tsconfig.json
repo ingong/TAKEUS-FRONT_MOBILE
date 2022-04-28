@@ -38,6 +38,7 @@
       "@service/*": ["./service/*"],
       "@context/*": ["./context/*"],
       "@Customtypes/*": ["./types/*"],
+      "@pipe/*": ["./pipe/*"],
     },
     "incremental": true,
     "skipLibCheck": true,
