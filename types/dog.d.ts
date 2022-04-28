@@ -23,6 +23,8 @@ export interface DogCardType {
   isInstitution: boolean;
   institutionName: string;
   registerDate: string;
+  shortenedDogName: string;
+  shortenedAirport: string;
   __v: number;
   detail: string;
 }
