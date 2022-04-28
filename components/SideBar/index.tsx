@@ -24,11 +24,11 @@ const SideBar = (): JSX.Element => {
           <DeleteIcon />
         </div>
         <ul>
-          <span onClick={() => handleMove('/')}>홈</span>
-          <span onClick={() => handleMove('/information')}>이동봉사 정보</span>
-          <span onClick={() => handleMove('/dogs')}>대상견 찾기</span>
-          <span onClick={() => handleMove('/reviews')}>이동봉사 후기</span>
-          <span onClick={() => handleMove('/about')}>About us</span>
+          <li onClick={() => handleMove('/')}>홈</li>
+          <li onClick={() => handleMove('/information')}>이동봉사 정보</li>
+          <li onClick={() => handleMove('/dogs')}>대상견 찾기</li>
+          <li onClick={() => handleMove('/reviews')}>이동봉사 후기</li>
+          <li onClick={() => handleMove('/about')}>About us</li>
         </ul>
       </SideBarContainer>
       <Overlay onClose={handleClose} />
