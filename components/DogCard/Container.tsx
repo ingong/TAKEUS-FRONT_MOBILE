@@ -1,9 +1,9 @@
 import React, { ReactElement } from 'react';
 import Carousel from '@components/Common/Carousel';
-import DogCard from '@components/DogCard';
+import DogCard from '@components/DogCard/DogCard';
 
 import { DogCardListType } from '@Customtypes/dog';
-import { Container, CardContainer } from './style';
+import { Container, CardContainer } from './ContainerStyle';
 
 const DogCardContainer = ({
   dogListCarousel,

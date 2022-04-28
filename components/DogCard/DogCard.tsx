@@ -5,7 +5,7 @@ import { useRouter } from 'next/router';
 import { DogCardType } from '@Customtypes/dog';
 import TestImage from '@assets/TestImage.png';
 import Location from '@assets/Location.svg';
-import { DogCardWrapper } from './style';
+import { DogCardWrapper } from './DogCardStyle';
 
 const DogCard = ({ dogCardInfo }: { dogCardInfo: DogCardType }): ReactElement => {
   const router = useRouter();
